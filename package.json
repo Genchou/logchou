@@ -6,7 +6,7 @@
   "repository": "https://github.com/genchou/logchou",
   "author": "Genchou <genchou@gvonh.be>",
   "license": "MIT",
-  "private": true,
+  "private": false,
   "dependencies": {
     "colors": "^1.2.1"
   }
