@@ -1,18 +1,23 @@
 const colors = require('colors');
 const ENV = process.env.NODE_ENV || "dev";
 
+function getTimestamp () {
+    const now = new Date();
+    return `${now.getFullYear()}-${now.getMonth() + 1}-${now.getDate()}T${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}.${now.getMilliseconds()}`;
+}
+
 const levels = {
     error: (str) => {
-        return "[ERROR]".bgRed.bold.black + colors.bgRed.black(` ${str}`);
+        return `[ERROR ${getTimestamp()}]`.bgRed.bold.black + colors.bgRed.black(` ${str}`);
     },
     warning: (str) => {
-        return "[WARNING]".underline.yellow + colors.yellow(` ${str}`);
+        return `[WARNING ${getTimestamp()}]`.underline.yellow + colors.yellow(` ${str}`);
     },
     debug: (str) => {
-        return "[DEBUG]".underline.cyan + colors.cyan(` ${str}`);
+        return `[DEBUG ${getTimestamp()}]`.underline.cyan + colors.cyan(` ${str}`);
     },
     info: (str) => {
-        return "[INFO]".underline.blue + colors.blue(` ${str}`);
+        return `[INFO ${getTimestamp()}]`.underline.blue + colors.blue(` ${str}`);
     }
 }
 
