@@ -7,7 +7,8 @@
   "author": "Genchou <genchou@gvonh.be>",
   "license": "MIT",
   "private": false,
-  "dependencies": {
-    "colors": "^1.2.1"
+  "dependencies": {},
+  "devDependencies": {
+    "standard": "^11.0.1"
   }
 }

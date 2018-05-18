@@ -1,9 +1,20 @@
-const Logger = require("../index");
+const Logger = require('../index')
 
-Logger.info("info message");
-Logger.debug("debug message");
-Logger.warning("warning message");
-Logger.error("error message");
+Logger.info('info message')
+Logger.debug('debug message')
+Logger.warning('warning message')
+Logger.error('error message')
+
+Logger.debug({
+  name: 'whatever',
+  embedded: {
+    id: 123,
+    randomArray: ['12', 45, { s: 4 }]
+  }
+})
+
+Logger.info('string', { name: 'object' }, 123, Number)
+
 setTimeout(() => {
-    Logger.debug("Delayed debug message");
-}, 5000);
+  Logger.debug('Delayed debug message')
+}, 5000)
