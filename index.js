@@ -36,6 +36,10 @@ class Logger {
       }
     })
   }
+  
+  static warn () {
+    return Logger.warning(...arguments)
+  }
 
   static error () {
     Logger.log('error', ...arguments)
