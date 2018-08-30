@@ -20,6 +20,9 @@ const levels = {
   },
   info: (str) => {
     return `\u001b[96m[INFO @ ${getTimestamp()}] ${str}\u001b[0m`
+  },
+  success: (str) => {
+    return `\u001b[92m[SUCCESS @ ${getTimestamp()}] ${str}\u001b[0m`
   }
 }
 
@@ -51,6 +54,11 @@ class Logger {
   static debug () {
     if (ENV === 'test') { return }
     Logger.log('debug', ...arguments)
+  }
+
+  static success () {
+    if (ENV === 'test') { return }
+    Logger.log('success', ...arguments)
   }
 }
 

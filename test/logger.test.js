@@ -4,6 +4,7 @@ Logger.info('info message')
 Logger.debug('debug message')
 Logger.warning('warning message')
 Logger.error('error message')
+Logger.success('success message')
 
 Logger.debug({
   name: 'whatever',
